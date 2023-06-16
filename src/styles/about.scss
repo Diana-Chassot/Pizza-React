@@ -1,0 +1,26 @@
+.about {
+  width: 100%;
+ h1{
+    font-size: 66px;
+    font-weight: 400;
+    text-transform: uppercase;
+ }
+ p{
+    color: $secondary;
+ }
+  .about__top {
+    width: 100%;
+    height: 60%;
+    background-image: url("/assets/img/pizza11.jpg");
+    @include bgCoverCenter;
+  }
+  .about__bottom {
+    @include flex-col;
+    gap: 10px;
+    color: $primary;
+    padding: 40px 80px;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+
+  }
+}

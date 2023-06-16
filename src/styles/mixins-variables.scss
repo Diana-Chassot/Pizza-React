@@ -1,0 +1,52 @@
+/* Variables */
+
+/* Colors */
+$primary:  #121212;
+$secondary:#989898;
+$accent: #ffcc00;
+
+$darkOpacity: rgba(38, 38, 38, 0.865);
+$lightOpacity: rgba(242, 242, 242, 0.6);
+
+/* Mixins */
+@mixin boxShadow {
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.319);
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-justify-between{
+    display: flex;
+    justify-content: space-between;
+  
+}
+@mixin flex-justify-around{
+    display: flex;
+    justify-content: space-around;
+ 
+}
+@mixin flex-justify-center{
+    display: flex;
+    justify-content: center;
+   
+}
+@mixin flex-end{
+    display: flex;
+    justify-content: end;
+}
+@mixin borderRadius{
+border-radius: 4px;
+}
+@mixin bgCoverCenter{
+    background-size: cover;
+    background-position: center;
+}
+@mixin positionFixed{
+    position: absolute;
+    z-index: 1000;
+}
+
+@mixin transition{
+    transition: transform ease-in-out 0.4s;
+}

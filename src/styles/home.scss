@@ -1,0 +1,14 @@
+.home {
+  @include flex-col;
+  @include bgCoverCenter;
+  background-image: url("/assets/img/pizza2.jfif");
+}
+.home__main {
+  @include flex-col;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  gap: 12px;
+  margin-top: 200px;
+  background-color: $lightOpacity;
+}

@@ -1,0 +1,43 @@
+.cart {
+  @include boxShadow;
+  @include flex-col;
+  @include positionFixed;
+  overflow-y: scroll;
+  top: 0;
+  position: fixed;
+  gap: 20px;
+  background-color: white;
+  min-width: 50%;
+  height: 100vh;
+  right: 0;
+
+  .cart__item {
+    @include flex-justify-between;
+    @include boxShadow;
+    position: relative;
+    align-items: center;
+ 
+  }
+  .cart__item-header {
+    @include flex-justify-between;
+    gap: 20px; align-items: center;
+    img{
+        object-fit: cover;
+        object-position: center;
+    }
+  }
+  .cart__item-body{
+    align-items: center;
+  }
+  .cart__footer{
+    @include flex-col;
+    gap: 10px;
+    padding: 10px;
+    text-align: end;
+  }
+  .cart__footer-btns{
+    @include flex-justify-between;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}

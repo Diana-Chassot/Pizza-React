@@ -1,0 +1,62 @@
+@media screen and (max-width: 1200px) {
+  .menu {
+    .menu__list {
+      justify-content: center;
+    }
+  }
+  .about {
+    .about__top {
+      height: 30%;
+    }
+    h1 {
+      font-size: 44px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .container--absolute {
+    min-width: 50%;
+  }
+  .contact {
+    .contact__right {
+      flex: 80%;
+    }
+    .contact__left {
+      flex: 20%;
+    }
+  }
+  .about {
+        .about__top {
+          height: 20%;
+        }
+    .about__bottom {
+      text-align: start;
+      padding: 20px 40px;
+    }
+    h1{
+        font-size: 33px;
+    }
+  }
+  .cart {
+   
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nav {
+    h2 {
+      display: none;
+    }
+  }
+  .container--absolute {
+    min-width: 100%;
+  }
+  .contact {
+    .contact__right {
+      flex: 90%;
+    }
+    .contact__left {
+      flex: 10%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.footer {
+  @include boxShadow;
+  @include flex-justify-center;
+  align-items: center;
+  height: 7vh;
+  .social-media {
+    @include flex-justify-center;
+    font-size: 23px;
+    gap: 25px;
+  }
+}
+.footer--light {
+  background-color: white;
+  a {
+    color: $primary;
+  }
+}
+.footer--dark {
+  background-color: $primary;
+  a {
+    color: white;
+  }
+}

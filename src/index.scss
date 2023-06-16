@@ -1,0 +1,61 @@
+@import "~normalize.css";
+@import "./styles/mixins-variables.scss";
+@import "./styles/generall.scss";
+@import "./styles/nav.scss";
+@import "./styles/home.scss";
+@import "./styles/menu.scss";
+@import "./styles/about.scss";
+@import "./styles/contact.scss";
+@import "./styles/footer.scss";
+@import "./styles/cart.scss";
+@import "./styles/media.scss";
+@import "./styles/form.scss";
+@import "./styles/success.scss";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: $primary;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  color: $primary;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  @include transition;
+}
+
+button:hover{
+  transform: scale(1.1);
+  background-color: $accent; 
+}
+svg{
+  @include transition;
+}
+svg:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+input,
+legend,
+select,
+textarea {
+  border: none;
+  outline: none;
+}

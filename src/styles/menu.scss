@@ -1,0 +1,53 @@
+.menu {
+  background-color: $primary;
+  color: white;
+  padding: 40px 10px;
+  .menu__title {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid white;
+  }
+  h1 {
+    font-size: 42px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  p {
+    color: $secondary;
+  }
+  .menu__list {
+    @include flex-justify-between;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    margin-top: 30px;
+  }
+  .menu__item {
+    @include boxShadow;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    img {
+      @include boxShadow;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .menu__item-body {
+    @include flex-col;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 15px;
+  }
+  .menu__item--new {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $accent;
+    color: $primary;
+    padding: 10px;
+  }
+  .menu__item-footer {
+    display: flex;
+    padding: 15px;
+  }
+}

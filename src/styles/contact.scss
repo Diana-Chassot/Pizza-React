@@ -1,0 +1,42 @@
+.contact {
+  @include flex-justify-between;
+  gap: 40px;
+  .contact__left {
+    @include bgCoverCenter;
+    background-image: url("/assets/img/pizza10.jfif");
+    flex: 40%;
+  }
+  .contact__right {
+    flex: 60%;
+    margin-top: 50px;
+  }
+  form {
+    @include flex-col;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  form input {
+    height: 40px;
+  }
+  form input,
+  form textarea {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #121619;
+  }
+  form textarea{
+    max-height: 200px;
+    max-width: 320px;
+   
+  }
+  form input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  form label {
+    color: $primary;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+}

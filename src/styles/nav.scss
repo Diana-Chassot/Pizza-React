@@ -1,0 +1,31 @@
+nav {
+  @include boxShadow;
+  background-color: white;
+  padding: 2px;
+  height: 7vh;
+  img{
+    z-index: 777;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+  .nav-container {
+    @include flex-justify-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .nav__right {
+    @include flex-justify-between;
+    gap: 20px;
+    align-items: center;
+    color: $primary;
+    position: relative;
+  }
+  
+ 
+}
+.nav__link,
+  .phone-info{
+    padding: 20px;
+  }
