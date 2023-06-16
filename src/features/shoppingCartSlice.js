@@ -15,8 +15,10 @@ const shoppingCartSlice = createSlice({
       state.items.push(action.payload);
     },
     removeFromCart: (state, action) => {
-      const index = action.payload;
-      state.items = state.items.filter((item, i) => i !== index);
+      state.items = state.items.filter((item, i) => i !== action.payload);
+    },
+    clearCart: (state) => { 
+      state.items = state.items ? [] : state.items 
     },
     calculateTotal: (state) => {
       state.total = state.items.reduce((total, item) => total + item.price, 0);
@@ -41,7 +43,8 @@ export const {
   calculateTotal,
   onOpenCart,
   onCLoseCart,
-  toogleCart
+  toogleCart,
+  clearCart
 } = shoppingCartSlice.actions;
 
 export default shoppingCartSlice.reducer;

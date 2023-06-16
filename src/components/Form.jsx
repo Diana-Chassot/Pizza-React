@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { closeForm } from "../features/formSlice";
 import { useFormik } from "formik";
-import { PatternFormat } from 'react-number-format';
-import { removeFromCart } from "../features/shoppingCartSlice";
+import { PatternFormat } from "react-number-format";
+import { clearCart } from "../features/shoppingCartSlice";
 import { useState } from "react";
 import Logo from "./Logo";
 import MessageSuccess from "./MessageSuccess";
@@ -13,15 +13,12 @@ function Form() {
   const isFormOpen = useSelector((state) => state.form.onOpen);
   const cartProducts = useSelector((state) => state.shoppingCart.items);
   const dispatch = useDispatch();
-  console.log(cartProducts)
-  
-  const handleSubmit=(values)=>{
+  console.log(cartProducts);
+
+  const handleSubmit = (values) => {
     if (cartProducts) {
-      cartProducts.forEach((product , i) => {
-        console.log(i);
-        dispatch(removeFromCart(i));
-      });
-      setIsSuccessOpen(true)
+      setIsSuccessOpen(true);
+      dispatch(clearCart());
     }
     console.log("Sold items:", cartProducts);
     console.log("Client delivery details:", values);
@@ -31,7 +28,7 @@ function Form() {
   const hideForm = () => {
     dispatch(closeForm());
   };
-  
+
   const validationSchema = Yup.object().shape({
     firstName: Yup.string()
       .min(3, "First Name must be at least 3 characters")
@@ -51,9 +48,7 @@ function Form() {
     street: Yup.string().required("Required"),
     city: Yup.string().required("Required"),
     houseNumber: Yup.string().required("Required"),
-    phone: Yup.string()
-    .required("Required"),
-
+    phone: Yup.string().required("Required"),
   });
 
   const formik = useFormik({
@@ -75,10 +70,10 @@ function Form() {
   return (
     <>
       {isFormOpen && (
-          <div className="client-form">
-            <div className="client-form--right"></div>
-            <div className="client-form--left">
-            <Logo/>
+        <div className="client-form">
+          <div className="client-form--right"></div>
+          <div className="client-form--left">
+            <Logo />
             <h5>Please enter your delivery details:</h5>
 
             <form onSubmit={formik.handleSubmit}>
@@ -162,9 +157,9 @@ function Form() {
               <div className="form-control">
                 <label htmlFor="phone">Phone</label>
                 <PatternFormat
-                  format="(+##) ### ## ## ##" allowEmptyFormatting mask="_"
-                  
-                  
+                  format="(+##) ### ## ## ##"
+                  allowEmptyFormatting
+                  mask="_"
                   name="phone"
                   value={formik.values.phone}
                   onChange={formik.handleChange}
@@ -178,17 +173,20 @@ function Form() {
                 <button type="submit" className="btn btn--dark">
                   Submit
                 </button>
-                <button type="cancel" className="btn btn--dark" onClick={hideForm}>
+                <button
+                  type="cancel"
+                  className="btn btn--dark"
+                  onClick={hideForm}
+                >
                   Cancel
                 </button>
               </div>
             </form>
           </div>
-          </div>
+        </div>
       )}
       <MessageSuccess onOpen={isSuccessOpen} setOnOpen={setIsSuccessOpen} />
     </>
-
   );
 }
 
