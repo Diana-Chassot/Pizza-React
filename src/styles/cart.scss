@@ -16,7 +16,8 @@
     @include boxShadow;
     position: relative;
     align-items: center;
- 
+    gap: 20px;
+    flex-wrap: wrap;
   }
   .cart__item-header {
     @include flex-justify-between;

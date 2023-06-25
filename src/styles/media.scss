@@ -12,10 +12,18 @@
       font-size: 44px;
     }
   }
+
+}
+@media screen and (max-width:900px){
+  .success-wrapper {
+    .success {
+      width: 100%;
+    }
+  }
 }
 @media screen and (max-width: 600px) {
   .container--absolute {
-    min-width: 50%;
+    min-width: 80%;
   }
   .contact {
     .contact__right {
@@ -26,20 +34,29 @@
     }
   }
   .about {
-        .about__top {
-          height: 20%;
-        }
-    .about__bottom {
-      text-align: start;
-      padding: 20px 40px;
+    height: 100vh;
+    .about__top {
+      height: 40%;
     }
-    h1{
-        font-size: 33px;
+    .about__bottom {
+      padding: 20px 10px;
+    }
+    .about__bottom p {
+      letter-spacing: 2px;
+      text-align: justify;
+    }
+    h1 {
+      font-size: 33px;
     }
   }
   .cart {
-   
     min-width: 100%;
+  }
+ 
+  .client-form {
+    .client-form--right {
+      flex: 10% !important;
+    }
   }
 }
 @media screen and (max-width: 400px) {
@@ -51,12 +68,23 @@
   .container--absolute {
     min-width: 100%;
   }
+  .menu__title p {
+    text-align: justify;
+  }
+
   .contact {
+    gap: 14px;
     .contact__right {
       flex: 90%;
     }
     .contact__left {
       flex: 10%;
     }
+  }
+  .contact form input {
+    width: 98%;
+  }
+  .client-form--right {
+    display: none;
   }
 }

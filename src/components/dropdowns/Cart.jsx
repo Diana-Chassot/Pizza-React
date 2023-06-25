@@ -75,7 +75,7 @@ function Cart() {
     <>
       {isOnOpen && (
         <div
-          className="dropdown-wrapper"
+          className="dropdown-wrapper dropdown-wrapper--fixed"
           onClick={() => dispatch(onCLoseCart())}
         >
           <div className="cart" onClick={(event) => event.stopPropagation()}>

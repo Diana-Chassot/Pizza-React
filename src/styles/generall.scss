@@ -38,11 +38,14 @@
 .dropdown-wrapper{
   @include flex-justify-center;
   @include positionFixed;
-  position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
 }
+.dropdown-wrapper--fixed{
+  position: fixed;
+}
+
 .container--absolute {
   @include boxShadow;
   @include positionFixed;
