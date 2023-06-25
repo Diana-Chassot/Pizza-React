@@ -11,12 +11,12 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 function App() {
 
   return (
-    <Router>
+    <Router basename="/Pizza-React">
       <Form />
       <Nav />
       <Cart />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home />}/>
         <Route path="/menu" element={<Menu />} />
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact />} />
