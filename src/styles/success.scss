@@ -24,7 +24,7 @@
 .success__content {
   background-color: $lightOpacity;
   @include flex-col;
-  align-items: start;
+  align-items: flex-start;
   gap: 15px;
   padding: 20px;
   

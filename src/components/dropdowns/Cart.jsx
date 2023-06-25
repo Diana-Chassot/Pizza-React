@@ -100,10 +100,7 @@ function Cart() {
                     />
 
                   </div>
-                  <div>
-                  <p><FontAwesomeIcon icon={faTruckFast} />Free shipping from 40SFr during 2 days</p> 
-                  <p><FontAwesomeIcon icon={faRightLeft} /> Free returns within 30 days </p>
-                  </div>
+  
                 </div>
               </>
             )}

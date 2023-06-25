@@ -13,7 +13,7 @@ function Form() {
   const isFormOpen = useSelector((state) => state.form.onOpen);
   const cartProducts = useSelector((state) => state.shoppingCart.items);
   const dispatch = useDispatch();
-  console.log(cartProducts);
+
 
   const handleSubmit = (values) => {
     if (cartProducts) {
