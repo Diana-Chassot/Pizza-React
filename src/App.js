@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 function App() {
 
   return (
-    <Router basename="/Pizza-React">
+    <Router>
       <Form />
       <Nav />
       <Cart />
