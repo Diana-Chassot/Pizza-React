@@ -16,10 +16,10 @@ function App() {
       <Nav />
       <Cart />
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/about" element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/Pizza-React/' element={<Home />}/>
+        <Route path="/Pizza-React/menu" element={<Menu />} />
+        <Route path="/Pizza-React/about" element={<About />} />
+        <Route path='/Pizza-React/contact' element={<Contact />} />
       </Routes>
       <Footer className="footer footer--light" />
     </Router>
