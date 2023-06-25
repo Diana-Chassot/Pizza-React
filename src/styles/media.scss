@@ -12,9 +12,8 @@
       font-size: 44px;
     }
   }
-
 }
-@media screen and (max-width:900px){
+@media screen and (max-width: 900px) {
   .success-wrapper {
     .success {
       width: 100%;
@@ -52,7 +51,7 @@
   .cart {
     min-width: 100%;
   }
- 
+
   .client-form {
     .client-form--right {
       flex: 10% !important;
@@ -71,7 +70,6 @@
   .menu__title p {
     text-align: justify;
   }
-
   .contact {
     gap: 14px;
     .contact__right {

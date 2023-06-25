@@ -16,9 +16,9 @@
   background-image: url("/assets/img/pizza2.jfif");
   width: 50%;
   height: 60%;
- @include flex-col;
+  @include flex-col;
   justify-content: center;
- align-items: center;
+  align-items: center;
 }
 
 .success__content {
@@ -27,6 +27,5 @@
   align-items: flex-start;
   gap: 15px;
   padding: 20px;
-  
   border: 2px solid white;
 }
