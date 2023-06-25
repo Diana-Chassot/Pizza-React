@@ -1,16 +1,16 @@
-import Button from "../components/Button";
 
 function Contact() {
+
   return (
     <section className="contact">
       <div className="contact__left"></div>
       <div className="contact__right">
         <h1>Contact us:</h1>
-        <form>
+        <form action="https://public.herotofu.com/v1/f67c0f90-1349-11ee-a6b0-17653bd30bd3" method="post" acceptCharset="UTF-8">
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" placeholder="Enter Full Name..." />
+          <input type="text" name="name" placeholder="Enter Full Name..." required/>
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" placeholder="Enter email..." />
+          <input type="email" name="email" placeholder="Enter your email..." required/>
           <label htmlFor="message">Message</label>
           <textarea
             rows="6"
@@ -18,7 +18,7 @@ function Contact() {
             name="message"
             required
           ></textarea>
-          <Button className="btn btn--dark" text="Send message"/>
+          <button type="submit" className="btn btn--dark">Send message</button>
         </form>
       </div>
     </section>
