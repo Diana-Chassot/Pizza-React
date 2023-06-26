@@ -7,7 +7,7 @@ function ButtonNavigation() {
     <Button
       className="btn btn--dark"
       text="Order now"
-      onClick={() => navigate("Pizza-React/menu")}
+      onClick={() => navigate("/menu")}
     ></Button>
   );
 }
