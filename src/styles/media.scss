@@ -22,8 +22,14 @@
   .container--absolute {
     min-width: 80%;
   }
+
 }
 @media screen and (max-width: 600px) {
+  .nav {
+    h2 {
+      display: none;
+    }
+  }
   .contact {
     .contact__right {
       flex: 80%;
@@ -33,7 +39,6 @@
     }
   }
   .about {
-    height: 100vh;
     .about__top {
       height: 40%;
     }
@@ -50,9 +55,6 @@
   }
   .cart {
     min-width: 100%;
-    .cart__item {
-     
-    }
     .cart__item-header {
       flex-wrap: wrap; 
       gap: 10px;
@@ -68,11 +70,7 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .nav {
-    h2 {
-      display: none;
-    }
-  }
+  
   .container--absolute {
     min-width: 100%;
   }

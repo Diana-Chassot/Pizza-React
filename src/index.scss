@@ -22,11 +22,17 @@ a {
   cursor: pointer;
   color: $primary;
 }
-
+html {
+  height: -webkit-fill-available;
+}
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: "Gill Sans", "Gill Sans MT", sans-serif;
   color: $primary;
 }
+
+
 button {
   cursor: pointer;
   background-color: transparent;
@@ -34,14 +40,14 @@ button {
   @include transition;
 }
 
-button:hover{
+button:hover {
   transform: scale(1.1);
-  background-color: $accent; 
+  background-color: $accent;
 }
-svg{
+svg {
   @include transition;
 }
-svg:hover{
+svg:hover {
   transform: scale(1.1);
   cursor: pointer;
 }

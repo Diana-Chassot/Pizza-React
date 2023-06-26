@@ -2,7 +2,7 @@ nav {
   @include boxShadow;
   background-color: white;
   padding: 2px 4px;
-  height: 7vh;
+  min-height: 50px;
   img{
     z-index: 777;
   }
@@ -23,8 +23,6 @@ nav {
     color: $primary;
     position: relative;
   }
-  
- 
 }
 
 .nav__icon{
