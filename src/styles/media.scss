@@ -24,7 +24,6 @@
   }
 }
 @media screen and (max-width: 600px) {
-  
   .contact {
     .contact__right {
       flex: 80%;
@@ -51,14 +50,20 @@
   }
   .cart {
     min-width: 100%;
+    .cart__item {
+     
+    }
+    .cart__item-header {
+      flex-wrap: wrap; 
+      gap: 10px;
+    }
   }
-
   .client-form {
     .client-form--right {
       flex: 10% !important;
     }
   }
-  .nav__link{
+  .nav__link {
     text-align: center;
   }
 }

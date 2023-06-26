@@ -17,7 +17,7 @@
     position: relative;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    padding: 4px;
   }
   .cart__item-header {
     @include flex-justify-between;
