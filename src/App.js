@@ -17,7 +17,7 @@ function App() {
       <Nav />
       <Cart />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home />} index/>
         <Route path="/menu" element={<Menu />} />
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact />} />
