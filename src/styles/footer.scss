@@ -2,7 +2,8 @@
   @include boxShadow;
   @include flex-justify-center;
   align-items: center;
-  height: 50px;
+  min-height: 7%;
+  padding: 10px;
   .social-media {
     @include flex-justify-center;
     font-size: 23px;

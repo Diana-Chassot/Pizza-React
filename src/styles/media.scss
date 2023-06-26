@@ -12,6 +12,9 @@
       font-size: 44px;
     }
   }
+  .container--absolute {
+    min-width: 60%;
+  }
 }
 @media screen and (max-width: 900px) {
   .success-wrapper {
@@ -93,14 +96,3 @@
   }
 }
 
-@media screen and (orientation: landscape) {
-  .home,
-  .about,
-  .contact {
-    height: 100%;
-  }
-  .client-form {
-    overflow-x: scroll;
-    height: 100%;
-  }
-}

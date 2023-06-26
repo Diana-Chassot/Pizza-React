@@ -1,40 +1,40 @@
-
 .client-form {
-  
-    .client-form--left{
-        flex: 70%;
-    }
-    .client-form--right{
-        flex: 30%;
-        background-image: url("/assets/img/pizza1.jfif");
-    }
-    @include positionFixed;
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    right: 0;
-    padding: 20px;
-    color: $primary;
-    background-color: white;
-    gap: 20px;
-    fieldset{
-      input {
-        @include flex-col;
-        margin-top: 10px;
-        border-bottom: 1px solid $primary;
-      }
-    }
-    .form-control {
+  @include positionFixed;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  padding: 20px;
+  color: $primary;
+  background-color: white;
+  gap: 20px;
+  overflow-x: scroll;
+  .client-form--left {
+    flex: 70%;
+  }
+  .client-form--right {
+    flex: 30%;
+    background-image: url("/assets/img/pizza1.jfif");
+  }
+
+  fieldset {
+    input {
       @include flex-col;
       margin-top: 10px;
       border-bottom: 1px solid $primary;
     }
-    .error-message {
-      color: $accent;
-    }
-    .btn {
-      margin-top: 20px;
-      margin-right: 10px;
-    }
   }
+  .form-control {
+    @include flex-col;
+    margin-top: 10px;
+    border-bottom: 1px solid $primary;
+  }
+  .error-message {
+    color: $accent;
+  }
+  .btn {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+}

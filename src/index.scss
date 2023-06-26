@@ -22,12 +22,12 @@ a {
   cursor: pointer;
   color: $primary;
 }
-html {
-  height: -webkit-fill-available;
+html,
+#root {
+  height: 100%;
 }
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100%;
   font-family: "Gill Sans", "Gill Sans MT", sans-serif;
   color: $primary;
 }
