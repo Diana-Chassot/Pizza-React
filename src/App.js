@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router
 function App() {
 
   return (
-    <Router>
+
       <HashRouter basename="/">
         <Form />
         <Nav />
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         <Footer className="footer footer--light" />
       </HashRouter>
-    </Router>
+
   );
 }
 
