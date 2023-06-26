@@ -19,11 +19,12 @@
       width: 100%;
     }
   }
-}
-@media screen and (max-width: 600px) {
   .container--absolute {
     min-width: 80%;
   }
+}
+@media screen and (max-width: 600px) {
+  
   .contact {
     .contact__right {
       flex: 80%;
@@ -56,6 +57,9 @@
     .client-form--right {
       flex: 10% !important;
     }
+  }
+  .nav__link{
+    text-align: center;
   }
 }
 @media screen and (max-width: 400px) {

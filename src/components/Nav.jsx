@@ -46,10 +46,10 @@ function Nav() {
            <Logo/>
           </div>
           <div className="nav__right">
-           <FontAwesomeIcon icon={onOpenBars ? faBars : faBarsStaggered} onClick={toogleNav} />
-            <FontAwesomeIcon icon={faMobile} onClick={tooglePhone} />
+           <FontAwesomeIcon icon={onOpenBars ? faBars : faBarsStaggered} onClick={toogleNav} className="nav__icon"/>
+            <FontAwesomeIcon icon={faMobile} onClick={tooglePhone} className="nav__icon"/>
             <div className="shoping-icon">
-              <FontAwesomeIcon icon={faStore} onClick={cartToogle} />
+              <FontAwesomeIcon icon={faStore} onClick={cartToogle} className="nav__icon" />
               {shoppingCartItemsLength > 0 && (
                 <span>{shoppingCartItemsLength}</span>
               )}
