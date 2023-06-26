@@ -6,13 +6,13 @@ import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Cart from './components/dropdowns/Cart';
 import Form from './components/Form';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, HashRouter} from "react-router-dom";
 
 function App() {
 
   return (
 
-    <Router basename="/Pizza-React">
+    <HashRouter>
       <Form />
       <Nav />
       <Cart />
@@ -23,7 +23,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer className="footer footer--light" />
-    </Router>
+    </HashRouter>
 
   );
 }
