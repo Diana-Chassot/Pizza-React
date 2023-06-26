@@ -51,7 +51,7 @@ function Nav() {
             <div className="shoping-icon">
               <FontAwesomeIcon icon={faStore} onClick={cartToogle} className="nav__icon" />
               {shoppingCartItemsLength > 0 && (
-                <span>{shoppingCartItemsLength}</span>
+                <p>{shoppingCartItemsLength}</p>
               )}
             </div>
           </div>

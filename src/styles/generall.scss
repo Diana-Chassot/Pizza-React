@@ -3,10 +3,10 @@
   padding: 0 10px;
   margin: 0 auto;
 }
-.logo-container a{
+.logo-container a {
   display: flex;
-    gap: 20px;
-    align-items: center;
+  gap: 20px;
+  align-items: center;
 }
 .home,
 .about,
@@ -27,22 +27,22 @@
   color: $primary;
   background-color: white;
 }
-.btn--close{
-  @include positionFixed;
-  margin: auto;
+
+.btn-close {
+  position: absolute;
+  top: 4px;
+  right: 1px;
   font-size: 14px;
-  color: $primary;
-  top: 2px;
-  right: 4px;
+  color: $secondary;
 }
-.dropdown-wrapper{
+.dropdown-wrapper {
   @include flex-justify-center;
   @include positionFixed;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.dropdown-wrapper--fixed{
+.dropdown-wrapper--fixed {
   position: fixed;
 }
 
@@ -54,23 +54,25 @@
   min-width: 25%;
   min-height: 80vh;
   right: 0;
-  .footer{
-  bottom: 0;
-  width: 100%;
-  position: absolute;
+  .footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
   }
-  .nav__link:hover{
-     background-color: $lightOpacity;
+  .nav__link:hover {
+    background-color: $lightOpacity;
   }
 }
 
+.shoping-icon {
+  
+}
 .shoping-icon{
-  svg{
-    margin-right: 4px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-
-.message-empty{ 
+.message-empty {
   @include flex-col;
   margin: auto;
   gap: 20px;

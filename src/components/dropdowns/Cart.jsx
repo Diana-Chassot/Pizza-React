@@ -60,7 +60,7 @@ function Cart() {
       <div className="cart__item-cart__footer">
         <Button
           className="btn--close"
-          text={<span>&#x2716;</span>}
+          text={<span>&times;</span>}
           onClick={() => dispatch(removeFromCart(index))}
         />
       </div>
