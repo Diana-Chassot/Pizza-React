@@ -70,7 +70,6 @@
   }
 }
 @media screen and (max-width: 400px) {
-  
   .container--absolute {
     min-width: 100%;
   }
@@ -91,5 +90,13 @@
   }
   .client-form--right {
     display: none;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .home,
+  .about,
+  .contact {
+    height: 100%;
   }
 }
