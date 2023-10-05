@@ -28,7 +28,9 @@ nav {
 .nav__icon{
   padding: 0 5px;
 }
-
+.nav-links{
+  @include flex-col;
+}
 .nav__link,
   .phone-info{
     padding: 20px;

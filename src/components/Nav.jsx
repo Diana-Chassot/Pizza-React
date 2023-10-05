@@ -57,7 +57,6 @@ function Nav() {
           </div>
         </div>
       </nav>
-
       <NavLinks onOpen={onOpenNav} setOnOpen={setOnOpenNav} />
       <PhoneInfo onOpen={onOpenPhone} setOnOpen={setOnOpenPhone} />
     </>

@@ -7,6 +7,7 @@ function NavLinks({ onOpen , setOnOpen }) {
       {onOpen && (
         <div className="dropdown-wrapper" onClick={()=>setOnOpen(false)}>
           <div className="container--absolute" onClick={(event) => event.stopPropagation()}>
+            <div className="nav-links">
             <Link className="nav__link" to={"/"} onClick={()=>setOnOpen(false)}>
               Home
             </Link>
@@ -19,6 +20,7 @@ function NavLinks({ onOpen , setOnOpen }) {
             <Link className="nav__link" to={"/contact"} onClick={()=>setOnOpen(false)}>
               Contact
             </Link>
+            </div>
             <Footer className={"footer footer--dark"} />
           </div>
         </div>
