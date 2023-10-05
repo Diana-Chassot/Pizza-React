@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
-
+import Button from "../Button";
 function NavLinks({ onOpen , setOnOpen }) {
   return (
     <>
       {onOpen && (
-        <div className="dropdown-wrapper" onClick={()=>setOnOpen(false)}>
-          <div className="container--absolute" onClick={(event) => event.stopPropagation()}>
+       
+          <div className="container--absolute" onClick={(event) => event.stopPropagation()}> 
+          
             <div className="nav-links">
             <Link className="nav__link" to={"/"} onClick={()=>setOnOpen(false)}>
               Home
@@ -23,7 +24,7 @@ function NavLinks({ onOpen , setOnOpen }) {
             </div>
             <Footer className={"footer footer--dark"} />
           </div>
-        </div>
+
       )}
     </>
   );

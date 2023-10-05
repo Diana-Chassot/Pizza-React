@@ -18,7 +18,12 @@
   border-radius: 2px;
   padding: 10px 15px;
   font-size: 16px;
+  transition: transform 0.4s ease-in-out;
   @include boxShadow();
+}
+.btn:hover{
+  transform: scale(1.1);
+  background-color: $accent;
 }
 .btn--dark {
   color: white;
@@ -29,23 +34,13 @@
   background-color: white;
 }
 
-.btn-close {
-  position: absolute;
-  top: 4px;
-  right: 1px;
-  font-size: 14px;
+.btn--close {
   color: $secondary;
+  transition: color 0.2s ease-in-out;
 }
-.dropdown-wrapper {
-  @include flex-justify-center;
-  @include positionFixed;
-  left: 0;
-  width: 100%;
+.btn--close:hover{
+  color: $accent;
 }
-.dropdown-wrapper--fixed {
-  position: fixed;
-}
-
 .container--absolute {
   @include boxShadow;
   @include positionFixed;

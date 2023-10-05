@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartCrack,faRightLeft,faTruckFast } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeartCrack,
+  faRightLeft,
+  faTruckFast,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { useEffect } from "react";
 import { calculateTotal } from "../../features/shoppingCartSlice";
@@ -74,37 +78,35 @@ function Cart() {
   return (
     <>
       {isOnOpen && (
-        <div
-          className="dropdown-wrapper dropdown-wrapper--fixed"
-          onClick={() => dispatch(onCLoseCart())}
-        >
-          <div className="cart" onClick={(event) => event.stopPropagation()}>
-            {shoppingCartItemsLength === 0 && messageEmptyCart}
-            {shoppingCartItemsLength > 0 && (
-              <>
+        <div className="cart">
+          <div className="close-cart">
+            <Button className="btn--close"text="x" onClick={() => dispatch(onCLoseCart())} />
+          </div>
+          {shoppingCartItemsLength === 0 && messageEmptyCart}
+          {shoppingCartItemsLength > 0 && (
+            <>
+              <div>
                 {shoppingCartItems.map((item, index) => (
                   <CartItem key={index} item={item} index={index} />
                 ))}
-                <div className="cart__footer">
-                  <p>Total: {formatCurrency(totalPrice)}</p>
-                  <div className="cart__footer-btns">
-                    <Button
-                      className="btn btn--dark"
-                      text="Close"
-                      onClick={() => dispatch(onCLoseCart())}
-                    />
-                    <Button
-                      className="btn btn--dark"
-                      text="Continue"
-                      onClick={hundleContinueBtn}
-                    />
-
-                  </div>
-  
+              </div>
+              <div className="cart__footer">
+                <p>Total: {formatCurrency(totalPrice)}</p>
+                <div className="cart__footer-btns">
+                  <Button
+                    className="btn btn--dark"
+                    text="Close"
+                    onClick={() => dispatch(onCLoseCart())}
+                  />
+                  <Button
+                    className="btn btn--dark"
+                    text="Continue"
+                    onClick={hundleContinueBtn}
+                  />
                 </div>
-              </>
-            )}
-          </div>
+              </div>
+            </>
+          )}
         </div>
       )}
     </>

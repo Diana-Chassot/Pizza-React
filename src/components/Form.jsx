@@ -38,13 +38,6 @@ function Form() {
       .min(3, "Last Name must be at least 3 characters")
       .max(15, "Last Name must be 15 characters or less")
       .required("Required"),
-    age: Yup.number()
-      .typeError("Age must be a valid number")
-      .integer("Age must be an integer")
-      .positive("Age must be a positive number")
-      .min(18, "Invalid")
-      .max(120, "Invalid")
-      .optional(),
     street: Yup.string().required("Required"),
     city: Yup.string().required("Required"),
     houseNumber: Yup.string().required("Required"),
@@ -55,7 +48,6 @@ function Form() {
     initialValues: {
       firstName: "",
       lastName: "",
-      age: "",
       street: "",
       houseNumber: "",
       city: "",
@@ -101,19 +93,6 @@ function Form() {
                 />
                 {formik.touched.lastName && formik.errors.lastName && (
                   <p className="error-message">{formik.errors.lastName}</p>
-                )}
-              </div>
-              <div className="form-control">
-                <label htmlFor="age">Age</label>
-                <input
-                  type="number"
-                  name="age"
-                  value={formik.values.age}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-                {formik.touched.age && formik.errors.age && (
-                  <p className="error-message">{formik.errors.age}</p>
                 )}
               </div>
               <fieldset className="form-control" htmlFor="Adress">

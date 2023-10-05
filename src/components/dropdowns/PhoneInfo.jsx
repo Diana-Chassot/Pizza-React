@@ -4,7 +4,6 @@ function PhoneInfo({ onOpen,setOnOpen }) {
   return (
     <>
       {onOpen && (
-        <div className="dropdown-wrapper" onClick={()=>setOnOpen(false)}>
           <div className="container--absolute" onClick={(event) => event.stopPropagation()}>
             <div className="phone-info">
               <h3>Contact us:</h3>
@@ -13,7 +12,6 @@ function PhoneInfo({ onOpen,setOnOpen }) {
             </div>
             <Footer className={"footer footer--dark"} />
           </div>
-        </div>
       )}
     </>
   );
